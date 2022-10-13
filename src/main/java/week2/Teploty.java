@@ -4,10 +4,26 @@
  */
 package week2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Filip Plass
  */
 public class Teploty {
+    public static void main(String[] args) {
+        //in
+        Scanner sc = new Scanner(System.in);
+        double rano = sc.nextDouble();
+        double poledne = sc.nextDouble();
+        double vecer = sc.nextDouble();
+        System.out.println(PrumeraDenniTeplota(rano, poledne, vecer));
+        
+    }
+    //cal
+    private static double PrumeraDenniTeplota(double rano, double poledne, double vecer){
+        return (rano + 2*poledne + vecer)/4;
+    }
+    
     
 }
